@@ -47,6 +47,7 @@ RUN set -ex ;\
       | tee /etc/apt/sources.list.d/llvm.list ;\
     apt-get update ;\
     apt-get install -y --no-install-recommends \
+      fish ripgrep fd-find \
       lsb-release less vim curl git grep sed gdb zsh lcov cmake ninja-build openssh-client ccache \
       python3 python3-pip python3-venv ;\
     apt-get install -t llvm-toolchain-${CODENAME}-${CLANG_RELEASE} -y --no-install-recommends \
